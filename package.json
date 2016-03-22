@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/App.js",
-  "scripts": {},
+  "scripts": {
+		"build": "webpack",
+		"watch": "webpack --watch",
+		"serve": "webpack-dev-server"
+	},
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -18,7 +22,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "history": "^2.0.1",
+    "history": "^2.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.1"
