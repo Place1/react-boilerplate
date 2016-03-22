@@ -27,4 +27,4 @@ ReactDOM.render((
 			<Route path="*" component={NoMatch}/>
 		</Route>
 	</Router>
-), document.getElementById("app"));
+), document.getElementById("App"));
