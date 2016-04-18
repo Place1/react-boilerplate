@@ -1,9 +1,11 @@
+const path = require('path');
+
 module.exports = {
 	entry: './src/App.js',
 	output: {
-		path: __dirname + '/build',
+		path: path.join(__dirname, 'dist'),
 		filename: 'App.js',
-		publicPath: '/build/',
+		publicPath: '/dist/',
 	},
 	module: {
 		loaders: [{
@@ -14,13 +16,9 @@ module.exports = {
 				presets: ['es2015', 'react', 'stage-0'],
 				plugins: ['transform-decorators-legacy']
 			}
-		}, {
-			test: /\.css$/,
-			loader: "style!css"
 		}]
 	},
 	devServer: {
-		port: 3000,
-		open: true,
+		port: 3000
 	}
 };
