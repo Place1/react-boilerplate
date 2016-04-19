@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
+	static propTypes = {
+
+	}
+
 	render() {
 		return (
 			<div>
 				<h1>hello world</h1>
 			</div>
-		)
+		);
 	}
 }
 
