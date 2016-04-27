@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "lint": "eslint ."
   },
   "author": "James Batt",
   "license": "MIT",
@@ -19,6 +20,9 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.0",
+    "eslint-plugin-jsx-a11y": "^1.0.3",
     "eslint-plugin-react": "^5.0.1",
     "path": "^0.12.7",
     "webpack": "^1.12.12",
