@@ -16,6 +16,15 @@ module.exports = {
 				presets: ['es2015', 'react', 'stage-0'],
 				plugins: ['transform-decorators-legacy']
 			}
+		}, {
+			test: /\.scss$/,
+			loaders: ['style', 'css', 'sass']
+		}, {
+			test: /\.css$/,
+			loader: "style-loader!css-loader"
+		}, {
+			test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+			loader: 'url-loader?limit=100000'
 		}]
 	},
 	devServer: {
