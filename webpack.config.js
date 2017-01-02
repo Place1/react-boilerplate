@@ -1,11 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+	devtool: "eval-source-map",
 	entry: './src/index.js',
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: '/dist/',
+		filename: 'bundle.[hash].js',
+		publicPath: '/',
 	},
 	module: {
 		loaders: [{
@@ -27,6 +29,12 @@ module.exports = {
 			loader: 'url-loader?limit=100000'
 		}]
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: path.join(__dirname, 'index.html'),
+			inject: true
+		})
+	],
 	devServer: {
 		port: 3000
 	}
